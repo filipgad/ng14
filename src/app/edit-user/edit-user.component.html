@@ -1,0 +1,12 @@
+<div class="title-container">
+  <h1>Edit user</h1>
+  <div>
+    <app-nav-button [routerLink]="'/home'" [text]="'Home - V1'" (onClick)="setVersion(1)"></app-nav-button>
+    <app-nav-button [routerLink]="'/home'" [text]="'Home - V2'" (onClick)="setVersion(2)"></app-nav-button>
+    <app-nav-button [routerLink]="'/add-user'" [text]="'Add user'"></app-nav-button>
+  </div>
+</div>
+
+<h4>Number of checks: {{ numberOfChecks$ | async }}</h4>
+
+<p>Miejce na formularz</p>

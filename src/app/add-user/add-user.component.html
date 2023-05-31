@@ -1,0 +1,27 @@
+<div class="title-container">
+  <h1>Add user</h1>
+  <div>
+    <app-nav-button [routerLink]="'/home'" [text]="'Home - V1'" (onClick)="setVersion(1)"></app-nav-button>
+    <app-nav-button [routerLink]="'/home'" [text]="'Home - V2'" (onClick)="setVersion(2)"></app-nav-button>
+    <app-nav-button [routerLink]="'/edit-user'" [text]="'Edit user'"></app-nav-button>
+  </div>
+</div>
+
+<h4>Number of checks: {{ numberOfChecks$ | async }}</h4>
+
+<form [formGroup]="form">
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+    <!--    8)-->
+<!--        <input type="number" formControlName="name">-->
+  </label>
+  <label>
+    Age:
+    <input type="number" formControlName="age">
+  </label>
+  <div class="form-buttons">
+    <button class="form-button" type="button" (click)="resetForm()"><span class="text">Reset</span><span>Reset</span></button>
+    <button class="form-button" type="button" (click)="checkValue()"><span class="text">Check</span><span>Check</span></button>
+  </div>
+</form>
